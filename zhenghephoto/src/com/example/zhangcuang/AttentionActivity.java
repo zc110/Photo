@@ -12,12 +12,11 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
-import android.widget.BaseAdapter;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
-import com.example.photo.R;
+import com.example.zc.photo.R;
 import com.example.zhaoliusheng.ZhongxinActivity;
 
 

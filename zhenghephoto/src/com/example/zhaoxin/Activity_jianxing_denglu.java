@@ -10,8 +10,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
 
-import com.example.photo.R;
 import com.example.yijiajun.YouxiangzhuceActivity;
+import com.example.zc.photo.R;
 
 public class Activity_jianxing_denglu extends Activity{
 	TextView textview_shouye_denglu;

@@ -5,14 +5,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.example.photo.R;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.GridView;
 import android.widget.ImageView;
+
+import com.example.zc.photo.R;
 
 public class SequareTwo extends Activity {// 广场2
 	GridView gridView;

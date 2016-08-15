@@ -12,7 +12,7 @@ import android.view.View.OnClickListener;
 import android.widget.CheckBox;
 import android.widget.ImageButton;
 
-import com.example.photo.R;
+import com.example.zc.photo.R;
 
 public class LeoActivity extends Activity{
     ImageButton leo_back,turnActivity;

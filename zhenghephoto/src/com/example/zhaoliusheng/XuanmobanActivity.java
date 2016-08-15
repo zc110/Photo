@@ -13,7 +13,7 @@ import android.widget.Gallery;
 import android.widget.Gallery.LayoutParams;
 import android.widget.ImageView;
 
-import com.example.photo.R;
+import com.example.zc.photo.R;
 
 public class XuanmobanActivity extends Activity{
 	Gallery gallery;

@@ -13,7 +13,7 @@ import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
-import com.example.photo.R;
+import com.example.zc.photo.R;
 
 
 @SuppressLint("NewApi")

@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.photo.R;
+import com.example.zc.photo.R;
 
 public class Fragment_main2 extends Fragment{
 		@Override

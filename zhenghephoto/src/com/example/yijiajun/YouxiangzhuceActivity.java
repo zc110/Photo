@@ -15,7 +15,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.photo.R;
+import com.example.zc.photo.R;
 import com.example.zhaoxin.Activity_jianxing_denglu;
 
 public class YouxiangzhuceActivity extends Activity {
@@ -31,7 +31,7 @@ public class YouxiangzhuceActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_youxiangzhuce);
 		getId();
-	}
+	}	
 
 	OnClickListener onClickListener = new OnClickListener() {
 

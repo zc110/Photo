@@ -1,8 +1,5 @@
 package com.example.zhaoxin;
 
-import com.example.photo.R;
-import com.example.zhaoliusheng.ZhongxinActivity;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +9,9 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.zc.photo.R;
+import com.example.zhaoliusheng.ZhongxinActivity;
 
 public class Activity_shoujidenglu extends Activity{
 	ImageView imageview_fanhui_shouyedenglu;

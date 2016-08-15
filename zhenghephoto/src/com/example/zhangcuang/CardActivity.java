@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageButton;
 
-import com.example.photo.R;
+import com.example.zc.photo.R;
 
 public class CardActivity extends Activity{
 ImageButton  buttonBack;

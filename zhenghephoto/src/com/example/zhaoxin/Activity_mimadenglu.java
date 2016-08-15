@@ -9,8 +9,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.photo.R;
 import com.example.yijiajun.WangjimimaActivity;
+import com.example.zc.photo.R;
 import com.example.zhaoliusheng.ZhongxinActivity;
 
 public class Activity_mimadenglu extends Activity{

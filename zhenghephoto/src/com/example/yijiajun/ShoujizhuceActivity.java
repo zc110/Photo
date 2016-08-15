@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.photo.R;
+import com.example.zc.photo.R;
 import com.example.zhaoxin.Activity_jianxing_denglu;
 import com.example.zhaoxin.Activity_mimadenglu;
 

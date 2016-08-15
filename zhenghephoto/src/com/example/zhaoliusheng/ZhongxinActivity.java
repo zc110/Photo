@@ -7,10 +7,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
 
-import com.example.photo.R;
+import com.example.zc.photo.R;
 import com.example.zhangcuang.AttentionActivity;
-import com.example.zhengshaopeng.PhotoMain;
-import com.example.zhengshaopeng.Sequare;
 
 public class ZhongxinActivity extends FragmentActivity {
 	TextView text_geren;
@@ -39,15 +37,15 @@ public class ZhongxinActivity extends FragmentActivity {
 			
 			switch (v.getId()) {
 			case R.id.textview_geren:
-				Intent intent = new Intent(ZhongxinActivity.this, PhotoMain.class);// ZhongxinActivity到PhotoMain
-				startActivity(intent);
+			//	Intent intent = new Intent(ZhongxinActivity.this,);// ZhongxinActivity到PhotoMain
+			//	startActivity(intent);
 				text_geren.setBackgroundColor(getResources().getColor(
 						R.color.hongse));
 				break;
 
 			case R.id.textview_guangchang:
-				Intent intent1 = new Intent(ZhongxinActivity.this, Sequare.class);// ZhongxinActivity到广场
-				startActivity(intent1);
+			//	Intent intent1 = new Intent(ZhongxinActivity.this, );// ZhongxinActivity到广场
+			//	startActivity(intent1);
 				text_guangchang.setBackgroundColor(getResources().getColor(
 						R.color.hongse));
 				break;

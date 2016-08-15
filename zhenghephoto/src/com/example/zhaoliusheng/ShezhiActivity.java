@@ -1,13 +1,13 @@
 package com.example.zhaoliusheng;
 
-import com.example.photo.R;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
+
+import com.example.zc.photo.R;
 
 public class ShezhiActivity extends Activity{
 	ImageView imageview;
