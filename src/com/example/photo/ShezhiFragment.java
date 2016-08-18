@@ -21,9 +21,8 @@ public class ShezhiFragment extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		View v = inflater.inflate(R.layout.activity_shezhi, container, false);
-		View mainView = inflater.inflate(R.layout.activity_gerenzhongxin, null,
-				false);
-		mSlidingMenu = (SlidingMenu) mainView.findViewById(R.id.id_menu);
+		mSlidingMenu = (SlidingMenu)getActivity().findViewById(R.id.id_menu);
+		
 		imageview = (ImageView) v.findViewById(R.id.imageview_shezhi);
 		imageview.setOnClickListener(clickListener);
 
@@ -82,9 +81,6 @@ public class ShezhiFragment extends Fragment {
 			}
 		});
 		return v;
-	}
-	public void toggleMenu(View view) {
-		mSlidingMenu.toggle();
 	}
 
 	OnClickListener clickListener = new OnClickListener() {

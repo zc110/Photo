@@ -14,7 +14,6 @@
             android:id="@+id/imageview_shezhi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="toggleMenu"
             android:padding="10dp"
             android:src="@drawable/shezhi" />
 

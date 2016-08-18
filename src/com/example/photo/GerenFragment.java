@@ -23,9 +23,7 @@ public class GerenFragment extends Fragment {
 			Bundle savedInstanceState) {
 		View v = inflater.inflate(R.layout.activity_geren, container, false);
 		listView = (ListView) v.findViewById(R.id.listview_geren);
-		
-		View mainView=inflater.inflate(R.layout.activity_gerenzhongxin, null,false);	
-		mSlidingMenu = (SlidingMenu) mainView.findViewById(R.id.id_menu);
+		mSlidingMenu = (SlidingMenu) getActivity().findViewById(R.id.id_menu);
 
 		imageview = (ImageView) v.findViewById(R.id.image_geren);
 		imageview.setOnClickListener(onClick);
@@ -40,7 +38,7 @@ public class GerenFragment extends Fragment {
 		public void onClick(View v) {
 			switch (v.getId()) {
 				case R.id.image_geren:
-					mSlidingMenu.openMenu();
+					mSlidingMenu.toggle();
 					break;
 				case R.id.ziliao_image:
 					Intent intent=new Intent(getActivity(),ZiliaoActivity.class);
@@ -52,12 +50,7 @@ public class GerenFragment extends Fragment {
 		}
 	};
 
-	public void toggleMenu(View view) {
-		mSlidingMenu.toggle();
-	}
-
 	public void getDataDowm() {
-
 		LayoutInflater inflater = getLayoutInflater(getArguments());
 		View headView = inflater.inflate(R.layout.activity_geren_head, null);
 		listView.addHeaderView(headView);
@@ -66,7 +59,7 @@ public class GerenFragment extends Fragment {
 		photoinfo.setImageBackground(R.drawable.xiaoyuan);
 		photoinfo.setImageHead(R.drawable.head);
 		photoinfo.setName("Leo");
-		photoinfo.setTime("2天前ǰ");
+		photoinfo.setTime("2天前");
 		photoinfo.setText("那年夏天，我们\n最后" + " 一次走过校园的林荫大道， "
 				+ " \n走向野心勃勃欲不可知的未来");
 		photoinfo.setLastCard(R.drawable.lastactivity);

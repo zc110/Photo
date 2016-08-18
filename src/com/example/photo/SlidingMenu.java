@@ -39,7 +39,8 @@ public class SlidingMenu extends HorizontalScrollView{
 			mWapper=(LinearLayout) getChildAt(0);
 			mMenu=(ViewGroup)mWapper.getChildAt(0);
 			mContent=(ViewGroup)mWapper.getChildAt(1);
-			mMenuWidth=mMenu.getLayoutParams().width=mScreenWidth-mMenuRightPadding;
+			mMenu.getLayoutParams().width=mScreenWidth-mMenuRightPadding;
+			mMenuWidth=mScreenWidth-mMenuRightPadding;
 			mContent.getLayoutParams().width=mScreenWidth;
 			once=true;
 		}
@@ -50,6 +51,7 @@ public class SlidingMenu extends HorizontalScrollView{
 		super.onLayout(changed, l, t, r, b);
 		if(changed){
 			this.scrollTo(mMenuWidth, 0);
+			isOpen=true;
 		}	
 	}
 
@@ -61,10 +63,10 @@ public class SlidingMenu extends HorizontalScrollView{
 			int scrollX=getScrollX();
 			if(scrollX>=mMenuWidth/2){
 				this.smoothScrollTo(mMenuWidth, 0);
-				isOpen=false;
+				isOpen=true;
 			}else{
 				this.smoothScrollTo(0, 0);
-				isOpen=true;
+				isOpen=false;
 			}
 			return true;
 		}
@@ -73,12 +75,12 @@ public class SlidingMenu extends HorizontalScrollView{
 	//打开菜单
 	public void openMenu(){
 		if(isOpen)return;
-		this.smoothScrollTo(0, 0);
+		this.smoothScrollTo(mMenuWidth, 0);
 		isOpen=true;
 	}
 	public void closeMenu(){
 		if(!isOpen)return;
-		this.smoothScrollTo(mMenuWidth, 0);
+		this.smoothScrollTo(0, 0);
 		isOpen=false;
 	}
 	//切换菜单
