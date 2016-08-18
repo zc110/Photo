@@ -5,7 +5,6 @@ import java.util.List;
 
 
 
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -23,56 +22,56 @@ public class GuangchangFragment extends Fragment{
 	SlidingMenu mSlidingMenu;
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		View v=inflater.inflate(R.layout.square,container, false);
-		listview=(ListView)v.findViewById(R.id.sequare_listview);
-		image_fanhui=(ImageView)v.findViewById(R.id.sequare_imageview);
+		View v=inflater.inflate(R.layout.activity_guangchang,container, false);
+		listview=(ListView)v.findViewById(R.id.listview_guangchang);
+		image_fanhui=(ImageView)v.findViewById(R.id.imageview_guangchang);
 		image_fanhui.setOnClickListener(l);
 		
-		
-		
-		imageview=(ImageView)v.findViewById(R.id.sequare_guangchangTwo);
+		imageview=(ImageView)v.findViewById(R.id.imageview_fuye);
 		imageview.setOnClickListener(l);
-		
-		View mainView=inflater.inflate(R.layout.activity_gerenzhongxin,null,false);
-		mSlidingMenu=(SlidingMenu) mainView.findViewById(R.id.id_menu);
+		mSlidingMenu=(SlidingMenu)getActivity().findViewById(R.id.id_menu);
 		getData();
 		return v;
 	}
 	private void getData() {
-		List<Photo> list = new ArrayList<Photo>();
-		
+		List<PhotoInfo> list = new ArrayList<PhotoInfo>();
 		LayoutInflater inflater = getLayoutInflater(getArguments());
-		View headView = inflater.inflate(R.layout.sequare_head, null);
+		View headView = inflater.inflate(R.layout.activity_guangchang_head, null);
 		listview.addHeaderView(headView);
-		
-		for(int i=0;i<3;i++){
-		Photo photo = new Photo();
-	
-		photo.setImageHead(R.drawable.head);
-		photo.setName("Leo");
-		photo.setTime("2天前");
-		photo.setText("那年夏天，我们");
-		photo.setZuihou("最后一次走过校园的林荫大道");
-		photo.setLastCard(R.drawable.sequare_one);
-		photo.setFuture("走过野心勃勃不可未知的未来");
-		list.add(photo);
-	
-}
 
-		SequenceAdapter myAdapter = new SequenceAdapter(R.layout.sequare_down,
+		PhotoInfo photoinfo = new PhotoInfo();
+		photoinfo.setImageBackground(R.drawable.xiaoyuan);
+		photoinfo.setImageHead(R.drawable.head);
+		photoinfo.setName("Leo");
+		photoinfo.setTime("2天前");
+		photoinfo.setText("那年夏天，我们\n最后" + " 一次走过校园的林荫大道， "
+				+ " \n走向野心勃勃欲不可知的未来");
+		photoinfo.setLastCard(R.drawable.lastactivity);
+		list.add(photoinfo);
+
+		PhotoInfo photoinfo1 = new PhotoInfo();
+		photoinfo1.setImageBackground(R.drawable.xiaoyuan);
+		photoinfo1.setImageHead(R.drawable.head);
+		photoinfo1.setName("Leo");
+		photoinfo1.setTime("2天前");
+		photoinfo1.setText("那年夏天，我们\n最后" + " 一次走过校园的林荫大道， "
+				+ " \n走向野心勃勃欲不可知的未来");
+		photoinfo1.setLastCard(R.drawable.lastactivity);
+		list.add(photoinfo1);
+		MyAdapter myAdapter = new MyAdapter(R.layout.activity_attention_two,
 				list, getActivity());
 		listview.setAdapter(myAdapter);
 		
 	}
-	public void toggleMenu(View view) {
-		mSlidingMenu.toggle();
-	}
-	
 	OnClickListener l=new OnClickListener() {
 		public void onClick(View v) {
 			switch (v.getId()){
-				case R.id.sequare_imageview:
+				case R.id.imageview_guangchang:
 					mSlidingMenu.toggle();
+					break;
+				case R.id.imageview_fuye:
+					Intent intent=new Intent(getActivity(),GuangchangActivity.class);
+					startActivity(intent);
 					break;
 				default:
 					break;

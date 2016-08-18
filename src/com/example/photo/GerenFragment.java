@@ -94,11 +94,8 @@ TextView geduo;
 		textView.setText(str);
 	}
 
-	private LayoutInflater getSystemService(String layoutInflaterService) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 	
 	
-
+	
+	
 }
