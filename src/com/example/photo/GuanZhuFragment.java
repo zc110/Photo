@@ -85,6 +85,4 @@ public class GuanZhuFragment extends Fragment {
 					R.layout.activity_attention_two, list, getActivity());
 			listView.setAdapter(myAdapter);
 		}
-	
-
 }
