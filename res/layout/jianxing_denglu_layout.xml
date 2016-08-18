@@ -33,7 +33,8 @@
     android:layout_marginLeft="30dp"
     android:layout_marginRight="30dp"
      android:background="@drawable/bk_denglu"
-       android:layout_marginTop="41dp">
+       android:layout_marginTop="41dp"
+       android:id="@+id/relativelayout_jianxingdenglu">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -50,7 +51,8 @@
         android:layout_marginTop="11dp"
         android:background="@drawable/bk_denglu"
          android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp">
+        android:layout_marginRight="30dp"
+        android:id="@+id/relativelayout_jianxingzhuce">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
