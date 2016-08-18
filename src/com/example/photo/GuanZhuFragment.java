@@ -25,10 +25,9 @@ public class GuanZhuFragment extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		View v = inflater.inflate(R.layout.activity_attention, container,false);
-		View mainView=inflater.inflate(R.layout.activity_gerenzhongxin, null,false);
 		listView = (ListView) v.findViewById(R.id.listview_attention);
 		getData();
-		mSlidingMenu=(SlidingMenu) mainView.findViewById(R.id.id_menu);
+		mSlidingMenu=(SlidingMenu)getActivity().findViewById(R.id.id_menu);
 		
 		image_fanhui=(ImageView)v.findViewById(R.id.openActivity);
 		image_fanhui.setOnClickListener(l);
@@ -85,6 +84,4 @@ public class GuanZhuFragment extends Fragment {
 					R.layout.activity_attention_two, list, getActivity());
 			listView.setAdapter(myAdapter);
 		}
-	
-
 }

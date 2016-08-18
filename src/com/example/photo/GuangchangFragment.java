@@ -29,8 +29,7 @@ public class GuangchangFragment extends Fragment{
 		
 		imageview=(ImageView)v.findViewById(R.id.imageview_fuye);
 		imageview.setOnClickListener(l);
-		View mainView=inflater.inflate(R.layout.activity_gerenzhongxin,null,false);
-		mSlidingMenu=(SlidingMenu) mainView.findViewById(R.id.id_menu);
+		mSlidingMenu=(SlidingMenu)getActivity().findViewById(R.id.id_menu);
 		getData();
 		return v;
 	}
@@ -63,9 +62,6 @@ public class GuangchangFragment extends Fragment{
 				list, getActivity());
 		listview.setAdapter(myAdapter);
 		
-	}
-	public void toggleMenu(View view) {
-		mSlidingMenu.toggle();
 	}
 	OnClickListener l=new OnClickListener() {
 		public void onClick(View v) {
