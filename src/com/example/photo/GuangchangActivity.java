@@ -7,6 +7,7 @@ import java.util.Map;
 
 
 
+
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
@@ -26,9 +27,10 @@ public class GuangchangActivity extends Activity{
 	int[] viewIds={R.id.fuyetu1,R.id.fuyetu2};
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.guangchang_fuye);
+		setContentView(R.layout.sequare_two);
 		listview=(ListView)findViewById(R.id.fuye_guang);
-		image=(ImageView)findViewById(R.id.imageview_guangchang);
+	
+		image=(ImageView)findViewById(R.id.sequaretwo_imageview);
 		image.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
 				finish();	
@@ -43,7 +45,7 @@ public class GuangchangActivity extends Activity{
 		List<PhotoInfo> list = new ArrayList<PhotoInfo>();
 		LayoutInflater inflater = (LayoutInflater)getSystemService(
 				Context.LAYOUT_INFLATER_SERVICE);
-		View headView = inflater.inflate(R.layout.activity_guangchang_head, null);
+		View headView = inflater.inflate(R.layout.sequare_two_head, null);
 		listview.addHeaderView(headView);
 		
 		Map<String,Object> map=new HashMap<String,Object>();
