@@ -14,6 +14,7 @@ import android.widget.ImageView;
 
 @SuppressWarnings("deprecation")
 public class XuanmobanActivity extends Activity{
+	ImageView image_moban;
 	Gallery gallery;
 	GalleryAdapter adapter;
 	ImageView imageview;
@@ -23,13 +24,26 @@ public class XuanmobanActivity extends Activity{
 		setContentView(R.layout.activity_xuanmoban);
 		imageview=(ImageView)findViewById(R.id.imageview_moban);
 		imageview.setOnClickListener(clickListener);
+		
+		image_moban=(ImageView)findViewById(R.id.moban);
+		image_moban.setOnClickListener(clickListener);
 		gallery=(Gallery)findViewById(R.id.gallery);
 		adapter=new GalleryAdapter(XuanmobanActivity.this,str);
 		gallery.setAdapter(adapter);
 	}
 	OnClickListener clickListener=new OnClickListener(){
 		public void onClick(View v) {
-			finish();
+			switch (v.getId()){
+				case R.id.imageview_moban:
+					finish();
+					break;
+				case R.id.moban:
+					image_moban.setImageResource(R.drawable.huigou);
+					break;
+				default:
+					break;
+			}
+			
 		}
 	};
 	public class GalleryAdapter extends BaseAdapter{

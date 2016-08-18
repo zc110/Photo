@@ -59,10 +59,12 @@
             android:layout_weight="1" />
 
         <ImageView
+            android:id="@+id/image_leo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:src="@drawable/check" />
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/baigou" />
     </LinearLayout>
 
     <LinearLayout
