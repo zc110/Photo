@@ -74,12 +74,13 @@
             android:layout_centerVertical="true" />
 
         <TextView
+              android:id="@+id/waitingGeduo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_marginRight="40dp"
             android:padding="10dp"
-            android:text="斯蒂芬-库里"
+            android:text="等待戈多"
             android:textSize="15sp" />
 
         <ImageView

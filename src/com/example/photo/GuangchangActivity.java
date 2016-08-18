@@ -5,17 +5,16 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
-
-
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.PopupWindow;
 import android.widget.SimpleAdapter;
 
 public class GuangchangActivity extends Activity{
@@ -25,35 +24,50 @@ public class GuangchangActivity extends Activity{
 	List<Map<String,Object>> lists=new ArrayList<Map<String,Object>>();
 	String[] keys={"img1","img2"};
 	int[] viewIds={R.id.fuyetu1,R.id.fuyetu2};
+	ImageView imageView1;
+	ImageView imageView2;
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.sequare_two);
-		listview=(ListView)findViewById(R.id.fuye_guang);
-	
-		image=(ImageView)findViewById(R.id.sequaretwo_imageview);
+		listview = (ListView) findViewById(R.id.fuye_guang);
+
+		image = (ImageView) findViewById(R.id.sequaretwo_imageview);
 		image.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				finish();	
+				finish();
 			}
 		});
 		getData();
-		simpleAdapter =new SimpleAdapter(this,lists,R.layout.guangchang_fuye_2,
-				keys,viewIds);
+		simpleAdapter = new SimpleAdapter(this, lists,
+				R.layout.guangchang_fuye_2, keys, viewIds);
 		listview.setAdapter(simpleAdapter);
+		
+		View view=this.getLayoutInflater().inflate(R.layout.guangchang_fuye_2, null);
+		final PopupWindow popup=new PopupWindow(view,280,360);
+		imageView1=(ImageView)view.findViewById(R.id.fuyetu1);
+		imageView1.setOnClickListener(new OnClickListener(){
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				popup.showAtLocation(v, Gravity.CENTER,20,20);
+			}
+			
+		});
 	}
+
 	private void getData() {
-		List<PhotoInfo> list = new ArrayList<PhotoInfo>();
-		LayoutInflater inflater = (LayoutInflater)getSystemService(
-				Context.LAYOUT_INFLATER_SERVICE);
+
+		LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		View headView = inflater.inflate(R.layout.sequare_two_head, null);
 		listview.addHeaderView(headView);
-		
-		Map<String,Object> map=new HashMap<String,Object>();
+
+		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("img1", R.drawable.tu4);
 		map.put("img2", R.drawable.tu3);
 		lists.add(map);
-		
-		map=new HashMap<String,Object>();
+
+		map = new HashMap<String, Object>();
 		map.put("img1", R.drawable.tu1);
 		map.put("img2", R.drawable.tu2);
 		lists.add(map);
