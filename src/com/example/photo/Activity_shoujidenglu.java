@@ -154,33 +154,7 @@ public class Activity_shoujidenglu extends Activity {
 					denglu();
 					Toast.makeText(getApplicationContext(), "验证成功",
 							Toast.LENGTH_SHORT).show();
-				} else if (event == SMSSDK.EVENT_GET_SUPPORTED_COUNTRIES) {
-					System.out.println("国家数据：");
-					System.out
-							.println("国家数据：" + SMSSDK.getGroupedCountryList());
-					String ct = data.toString();
-					// tv.setText(ct);
-					first = SMSSDK.getGroupedCountryList();
-					System.out.println("第一层数组：" + first);
-					Set set = first.keySet();
-					for (Object obj : set) {
-						// System.out.println("键:"+obj+"  值:"+first.get(obj));
-						second = first.get(obj);
-						System.out.println("第二层数组：" + second);
-						for (int i = 0; i < second.toArray().length; i++) {
-							String[] thirst = second.get(i);
-							System.out.println("第三层数组：" + thirst);
-							System.out.println("单个国家字符：" + thirst[0] + "和"
-									+ thirst[1]);
-							String str = thirst[0] + "----------" + thirst[1]
-									+ "；\n";
-							countyList = countyList + str;
-							System.out.println("----" + countyList);
-						}
-
-					}
-					// tv.setText(countyList);
-				}
+				} 
 			} else {
 				int status = 0;
 				try {
