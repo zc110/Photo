@@ -21,102 +21,96 @@
         android:textSize="20sp" />
 
     <LinearLayout
+        android:id="@+id/layout_geren"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:orientation="vertical" >
+        android:orientation="horizontal" >
 
-        <LinearLayout
-            android:id="@+id/layout_geren"
+        <ImageView
+            android:id="@+id/zhongxin_geren_imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:src="@drawable/noren" />
+
+        <TextView
+            android:id="@+id/zhongxin_geren_textview"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal" >
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="15dp"
+            android:text="个人TIMELINE"
+            android:textSize="16sp" />
+    </LinearLayout>
 
-            <ImageView
-                android:id="@+id/zhongxin_geren_imageview"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="20dp"
-                android:src="@drawable/noren" />
+    <LinearLayout
+        android:id="@+id/layout_guangchang"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
 
-            <TextView
-                android:id="@+id/zhongxin_geren_textview"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="15dp"
-                android:text="个人TIMELINE"
-                android:textSize="16sp" />
-        </LinearLayout>
+        <ImageView
+            android:id="@+id/zhongxin_guangchang_imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:src="@drawable/noguang" />
 
-        <LinearLayout
-            android:id="@+id/layout_guangchang"
+        <TextView
+            android:id="@+id/zhongxin_guangchang_textview"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal" >
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="15dp"
+            android:text="广场EXPLORE"
+            android:textSize="16sp" />
+    </LinearLayout>
 
-            <ImageView
-                android:id="@+id/zhongxin_guangchang_imageview"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="20dp"
-                android:src="@drawable/noguang" />
+    <LinearLayout
+        android:id="@+id/layout_guanzhu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
 
-            <TextView
-                android:id="@+id/zhongxin_guangchang_textview"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="15dp"
-                android:text="广场EXPLORE"
-                android:textSize="16sp" />
-        </LinearLayout>
+        <ImageView
+            android:id="@+id/zhongxin_guanzhu_imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:src="@drawable/nozhu" />
 
-        <LinearLayout
-            android:id="@+id/layout_guanzhu"
+        <TextView
+            android:id="@+id/zhongxin_guanzhu_textview"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal" >
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="15dp"
+            android:text="关注FEED"
+            android:textSize="16sp" />
+    </LinearLayout>
 
-            <ImageView
-                android:id="@+id/zhongxin_guanzhu_imageview"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="20dp"
-                android:src="@drawable/nozhu" />
+    <LinearLayout
+        android:id="@+id/layout_shezhi"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
 
-            <TextView
-                android:id="@+id/zhongxin_guanzhu_textview"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="15dp"
-                android:text="关注FEED"
-                android:textSize="16sp" />
-        </LinearLayout>
+        <ImageView
+            android:id="@+id/zhongxin_shezhi_imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:src="@drawable/noshe" />
 
-        <LinearLayout
-            android:id="@+id/layout_shezhi"
+        <TextView
+            android:id="@+id/zhongxin_shezhi_textview"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal" >
-
-            <ImageView
-                android:id="@+id/zhongxin_shezhi_imageview"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="20dp"
-                android:src="@drawable/noshe" />
-
-            <TextView
-                android:id="@+id/zhongxin_shezhi_textview"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="15dp"
-                android:text="设置SETTING"
-                android:textSize="16sp" />
-        </LinearLayout>
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="15dp"
+            android:text="设置SETTING"
+            android:textSize="16sp" />
     </LinearLayout>
 
 </LinearLayout>
