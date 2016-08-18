@@ -129,7 +129,7 @@ public class YouxiangzhuceActivity extends Activity {
 					Looper.loop();
 				} else {
 					Looper.prepare();
-					Toast.makeText(YouxiangzhuceActivity.this, "错误",
+					Toast.makeText(YouxiangzhuceActivity.this, "用户已经存在",
 							Toast.LENGTH_SHORT).show();
 					Looper.loop();
 				}
@@ -145,9 +145,8 @@ public class YouxiangzhuceActivity extends Activity {
 			// TODO Auto-generated method stub
 			switch (v.getId()) {
 			case R.id.youxiang_zhuce:
-				huoquyanzhengma();
-				// baocun(username, password);
-
+				//panduan(editText_youxiangzhanghao.getText().toString());
+				zhuce();			
 				break;
 			case R.id.shoujizhuce:
 				tiaozhuan();
@@ -163,7 +162,7 @@ public class YouxiangzhuceActivity extends Activity {
 	};
 
 	@SuppressLint("NewApi")
-	public void huoquyanzhengma() {
+	public void zhuce() {
 		String youxiang = editText_youxiangzhanghao.getText().toString().trim();
 		String mima = editText_shezhimima.getText().toString().trim();
 
@@ -175,10 +174,11 @@ public class YouxiangzhuceActivity extends Activity {
 		} else if (mima.equals("")) {
 			Toast.makeText(YouxiangzhuceActivity.this, "密码不能为空",
 					Toast.LENGTH_SHORT).show();
-		} else {
+		}
+		else {
 			Toast.makeText(YouxiangzhuceActivity.this, "注册成功",
 					Toast.LENGTH_SHORT).show();
-			complete();
+			complete();	
 			shouye();
 			return;
 		}
@@ -207,6 +207,82 @@ public class YouxiangzhuceActivity extends Activity {
 		startActivity(intent);
 	}
 
-	
+	String str;
+
+	public void panduan(final String username) {
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+
+				StringBuilder builder = new StringBuilder();
+				try {
+					String httpHost = "http://192.168.1.151/home/index/youxiangpanduan";// php接口
+					String name = "username=" + username;
+					String urlName = httpHost + "?" + name;
+					URL url = new URL(urlName);
+					HttpURLConnection connection = (HttpURLConnection) url
+							.openConnection();
+					connection.setConnectTimeout(5000);
+					connection.setRequestProperty("accept", "*/*");// 设置客户端接受那些类型的信息，通配符代表接收所有类型的数据
+					connection.setRequestProperty("connection", "Keep-Alive");// 保持长链接
+					connection
+							.setRequestProperty("user-agent",
+									"Mozilla/4.0(compatible;MSIE 6.0;Windows NT5.1;SV1)");// 设置浏览器代理
+					connection
+							.setRequestProperty("accept-charset", "utf-8;GBK");// 客户端接受的字符集
+					connection.connect();// 建立连接
+					InputStream inputStream = connection.getInputStream();
+					Map<String, List<String>> headers = connection
+							.getHeaderFields();
+					for (String key : headers.keySet()) {
+						System.out.println(key + "----" + headers.get(key));
+
+					}
+					BufferedReader bufferedReader = new BufferedReader(
+							new InputStreamReader(inputStream));
+					String line = bufferedReader.readLine();
+					while (line != null && line.length() > 0) {
+						builder.append(line);
+						line = bufferedReader.readLine();
+					}
+					bufferedReader.close();
+					inputStream.close();
+					str = builder.toString();
+					myHandler.sendEmptyMessage(0);
+
+				} catch (MalformedURLException e) {
+					e.printStackTrace();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+
+		}).start();
+	}
+
+	@SuppressLint("HandlerLeak")
+	Handler myHandler = new Handler() {
+		public void handleMessage(Message msg) {
+			try {
+				JSONObject jsonObject = new JSONObject(str);
+				int status = jsonObject.getInt("status");
+				String message = jsonObject.getString("message");
+				if (status == 2) {
+					Toast.makeText(YouxiangzhuceActivity.this, message,
+							Toast.LENGTH_SHORT).show();// 
+				} else if (status ==1) {
+					Toast.makeText(YouxiangzhuceActivity.this, "",
+							Toast.LENGTH_SHORT).show();//
+					
+				}
+
+			} catch (JSONException e) {
+				// TODO 自动生成的 catch 块
+				e.printStackTrace();
+			}
+
+		}
+	};
+
 
 }
