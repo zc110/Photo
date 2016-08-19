@@ -67,14 +67,15 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="20dp"
             android:text="名字"
-            android:textSize="15sp"
-            android:layout_centerVertical="true" />
+            android:textSize="15sp" />
 
         <TextView
-              android:id="@+id/waitingGeduo"
+            android:id="@+id/waitingGeduo"
+           
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
@@ -101,19 +102,20 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="20dp"
             android:text="性别"
-            android:textSize="15sp"
-            android:layout_centerVertical="true" />
+            android:textSize="15sp" />
+
         <Spinner
             android:id="@+id/spinner_ziliao"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="40dp" 
+            android:layout_marginRight="40dp"
             android:layout_marginTop="10dp"
-            android:background="@null"/>
+            android:background="@null" />
 
         <ImageView
             android:id="@+id/imageView1"
@@ -134,11 +136,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="20dp"
             android:text="相册号"
-            android:textSize="15sp" 
-            android:layout_centerVertical="true"/>
+            android:textSize="15sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -159,11 +161,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="20dp"
             android:text="手机号码"
-            android:textSize="15sp" 
-            android:layout_centerVertical="true"/>
+            android:textSize="15sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -192,11 +194,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="20dp"
             android:text="我的地址"
-            android:textSize="15sp" 
-            android:layout_centerVertical="true"/>
+            android:textSize="15sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -225,11 +227,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="20dp"
             android:text="个性签名"
-            android:textSize="15sp"
-            android:layout_centerVertical="true" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/qianming_text"
