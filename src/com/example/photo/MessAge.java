@@ -23,4 +23,9 @@ public class MessAge extends Activity{//消息通知
 		}
 	});	
 	}
+  
+
+
+
+
 }

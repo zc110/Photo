@@ -38,6 +38,7 @@
         android:layout_margin="20dp"
         android:background="@drawable/tet_clear"
         android:gravity="center"
+        android:id="@+id/qinglilaji"
         android:text="清理已选中垃圾100MB"
         android:textColor="#ff4500" />
 

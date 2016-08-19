@@ -49,8 +49,12 @@
         <activity android:name="com.example.photo.ZhangHaoAnQuanActivity"/>
         
         <activity android:name="com.example.photo.MainActivity"/>
-        <activity android:name="com.example.photo.ZiliaoActivity"/>
-        <activity android:name="com.example.photo.QianmingActivity"/>
+        <activity android:name="com.example.photo.ZiliaoActivity"
+               android:launchMode="singleTop" 
+            />
+        <activity android:name="com.example.photo.QianmingActivity"
+        
+            />
         <activity android:name="com.example.photo.Activity_mimadenglu"/>
         <activity android:name="com.example.photo.Activity_shoujidenglu"/>
         <activity android:name="com.example.photo.ShoujizhuceActivity"/>

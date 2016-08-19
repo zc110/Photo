@@ -31,16 +31,19 @@ public class QianmingActivity extends Activity{
 			  		break;
 			  	case R.id.text_wancheng:
 			  		getData();
-			  		finish();
+			  		
 			  		break;
 			  	default:
 			  		break;
 			}	
 		}
 	};
+	
 	public void getData(){
-		Intent intent=new Intent(this,ZiliaoActivity.class);
-		intent.putExtra("qianming", edittext.getText().toString());
+		 Intent intent  = new  Intent();
+		 intent.putExtra("qianming",edittext.getText().toString());
+		//setResult(RESULT_OK, intent);
 		startActivity(intent);
+		finish();
 	}
 }
