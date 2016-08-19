@@ -67,21 +67,19 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="20dp"
             android:text="名字"
-            android:textSize="15sp" />
+            android:textSize="15sp"
+            android:layout_centerVertical="true" />
 
         <TextView
-            android:id="@+id/waitingGeduo"
-           
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_marginRight="40dp"
             android:padding="10dp"
-            android:text="等待戈多"
+            android:text="斯蒂芬-库里"
             android:textSize="15sp" />
 
         <ImageView
@@ -102,20 +100,19 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="20dp"
             android:text="性别"
-            android:textSize="15sp" />
-
+            android:textSize="15sp"
+            android:layout_centerVertical="true" />
         <Spinner
             android:id="@+id/spinner_ziliao"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="40dp"
+            android:layout_marginRight="40dp" 
             android:layout_marginTop="10dp"
-            android:background="@null" />
+            android:background="@null"/>
 
         <ImageView
             android:id="@+id/imageView1"
@@ -136,11 +133,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="20dp"
             android:text="相册号"
-            android:textSize="15sp" />
+            android:textSize="15sp" 
+            android:layout_centerVertical="true"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -161,11 +158,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="20dp"
             android:text="手机号码"
-            android:textSize="15sp" />
+            android:textSize="15sp" 
+            android:layout_centerVertical="true"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -194,11 +191,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="20dp"
             android:text="我的地址"
-            android:textSize="15sp" />
+            android:textSize="15sp" 
+            android:layout_centerVertical="true"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -219,6 +216,7 @@
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/tiaozhuan"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="1dp"
@@ -227,14 +225,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="20dp"
             android:text="个性签名"
-            android:textSize="15sp" />
+            android:textSize="15sp"
+            android:layout_centerVertical="true" />
 
         <TextView
-            android:id="@+id/qianming_text"
+            android:id="@+id/text_gexing"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
@@ -244,7 +242,6 @@
             android:textSize="15sp" />
 
         <ImageView
-            android:id="@+id/tiaozhuan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
