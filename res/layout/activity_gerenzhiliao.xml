@@ -216,6 +216,7 @@
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/tiaozhuan"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="1dp"
@@ -231,7 +232,7 @@
             android:layout_centerVertical="true" />
 
         <TextView
-            android:id="@+id/qianming_text"
+            android:id="@+id/text_gexing"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
@@ -241,7 +242,6 @@
             android:textSize="15sp" />
 
         <ImageView
-            android:id="@+id/tiaozhuan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
